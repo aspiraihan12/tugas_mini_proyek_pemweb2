@@ -9,13 +9,13 @@ class View {
         echo "<tr>
         <th>ID</th>
         <th>data barang id</th>
-        <th>jumlah barang</th>
+        <th>Total Stok</th>
         <th>Action</th></tr>";
         foreach ($data as $row) {
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['data_barang_id'] . "</td>";
-            echo "<td>" . $row['jumlah_barang'] . "</td>";
+            echo "<td>" . $row['total_stok'] . "</td>";
             echo "<td><a href='controller_Stok.php?page=edit&id=" . $row['id'] . "'>Edit</a> | <a href='controller_Stok.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";
         }
@@ -57,9 +57,9 @@ class View {
 
         echo "
         <tr>
-        <td>Jumlah Barang</td>
+        <td>Total Stok</td>
         <td>:</td>
-        <td><input type='number' name='jumlah_barang'/></td>
+        <td><input type='number' name='total_stok'/></td>
         </tr>";
 
         echo "
@@ -83,9 +83,9 @@ class View {
 
         echo "
         <tr>
-        <td>Jumlah Barang</td>
+        <td>Total Stok</td>
         <td>:</td>
-        <td><input type='number' name='jumlah_barang' value ='". $row['jumlah_barang']."'/></td>
+        <td><input type='number' name='total_stok' value ='". $row['total_stok']."'/></td>
         </tr>";
 
         echo "

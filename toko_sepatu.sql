@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2023 at 04:34 AM
+-- Generation Time: Mar 22, 2023 at 05:56 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `password`) VALUES
-(1, 'aspi', 'aspi@gmail.com', 'admin');
+(1, 'aspiraihan', 'aspi@gmail.com', 'admin123');
 
 -- --------------------------------------------------------
 
@@ -100,7 +100,9 @@ CREATE TABLE `distributor` (
 --
 
 INSERT INTO `distributor` (`id`, `nama_distributor`, `alamat`, `telepon`) VALUES
-(1, 'PT.ADIDAS', 'JAKARTA SELATAN BLOK M', '087789055766');
+(1, 'PT.ADIDASx', 'JAKARTA SELATAN BLOK M', '0852517737'),
+(7, 'assss', 'aspi', '0852517737'),
+(11, 'CERTIFICATE OF COMPETENCE Junior Web Developer', 'lokasi', '12');
 
 -- --------------------------------------------------------
 
@@ -111,15 +113,16 @@ INSERT INTO `distributor` (`id`, `nama_distributor`, `alamat`, `telepon`) VALUES
 CREATE TABLE `stok` (
   `id` int(11) UNSIGNED NOT NULL,
   `data_barang_id` int(11) UNSIGNED NOT NULL,
-  `jumlah_barang` int(11) NOT NULL
+  `total_stok` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `stok`
 --
 
-INSERT INTO `stok` (`id`, `data_barang_id`, `jumlah_barang`) VALUES
-(1, 1, 10);
+INSERT INTO `stok` (`id`, `data_barang_id`, `total_stok`) VALUES
+(1, 1, 11),
+(5, 1, 21);
 
 -- --------------------------------------------------------
 
@@ -132,7 +135,7 @@ CREATE TABLE `transaksi` (
   `costumer_id` int(11) UNSIGNED NOT NULL,
   `data_barang_id` int(11) UNSIGNED NOT NULL,
   `admin_id` int(11) UNSIGNED NOT NULL,
-  `jumlah_barang` int(11) NOT NULL,
+  `jumlah_transaksi` int(11) NOT NULL,
   `tanggal_transaksi` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -140,7 +143,7 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id`, `costumer_id`, `data_barang_id`, `admin_id`, `jumlah_barang`, `tanggal_transaksi`) VALUES
+INSERT INTO `transaksi` (`id`, `costumer_id`, `data_barang_id`, `admin_id`, `jumlah_transaksi`, `tanggal_transaksi`) VALUES
 (1, 1, 1, 1, 1, '2023-03-19');
 
 --
@@ -196,31 +199,31 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `costumer`
 --
 ALTER TABLE `costumer`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `data_barang`
 --
 ALTER TABLE `data_barang`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `distributor`
 --
 ALTER TABLE `distributor`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `stok`
 --
 ALTER TABLE `stok`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `transaksi`

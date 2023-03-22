@@ -16,7 +16,7 @@ class Model {
 
     public function index() {
         $conn = $this->connect();
-        $result = $conn->query("SELECT * FROM stok");
+        $result = $conn->query("SELECT * FROM transaksi");
         $data = array();
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;
@@ -26,21 +26,21 @@ class Model {
 
     public function insert_data($data) {
         $conn = $this->connect();
-        $sql = "INSERT INTO stok (data_barang_id, total_stok) VALUES ('" . $data['data_barang_id'] . "','" . $data['total_stok'] . "')";
+        $sql = "INSERT INTO transaksi (costumer_id, data_barang_id, admin_id, jumlah_transaksi,tanggal_transaksi) VALUES ('" . $data['costumer_id'] . "', '" . $data['data_barang_id'] . "', '" . $data['admin_id'] . "','" . $data['jumlah_transaksi'] . "','" . $data['tanggal_transaksi'] . "')";
         $result = $conn->query($sql);
         return $result;
     }
 
     public function update_data($id,$data) {
         $conn = $this->connect();
-        $sql = "UPDATE stok SET data_barang_id='" . $data['data_barang_id'] . "',  total_stok='" . $data['total_stok'] . "' WHERE id=" . $id;
+        $sql = "UPDATE transaksi SET costumer_id='" . $data['costumer_id'] . "', data_barang_id='" . $data['data_barang_id'] . "', admin_id='" . $data['admin_id'] . "', jumlah_transaksi='" . $data['jumlah_transaksi'] . "', tanggal_transaksi='" . $data['tanggal_transaksi'] .  "' WHERE id=" . $id;
         $result = $conn->query($sql);
         return $result;
     }
 
     public function delete_data($id) {
         $conn = $this->connect();
-        $sql = "DELETE FROM stok WHERE id=" . $id;
+        $sql = "DELETE FROM transaksi WHERE id=" . $id;
         $result = $conn->query($sql);
         return $result;
     }
@@ -48,7 +48,7 @@ class Model {
 
     public function edit($id) {
         $conn = $this->connect();
-        $result = $conn->query("SELECT * FROM stok where id=$id");
+        $result = $conn->query("SELECT * FROM transaksi where id=$id");
         $data = array();
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;

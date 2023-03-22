@@ -1,7 +1,7 @@
 <?php
 
-include_once('../models/model_Stok.php');
-include_once('../views/view_Stok.php');
+include_once('../models/model_Transaksi.php');
+include_once('../views/view_Transaksi.php');
 
 class Controller
 {
@@ -38,14 +38,15 @@ class Controller
    {
 
       $data = array(
-      
-         'total_stok' => $_POST['total_stok'],
+         'costumer_id' => $_POST['costumer_id'],
          'data_barang_id' => $_POST['data_barang_id'],
-         
+         'admin_id' => $_POST['admin_id'],
+         'jumlah_transaksi' => $_POST['jumlah_transaksi'],
+         'tanggal_transaksi' => $_POST['tanggal_transaksi']
       );
       $result = $this->model->insert_data($data);
       if ($result) {
-         header("Location: ../controllers/controller_Stok.php");
+         header("Location: ../controllers/controller_Transaksi.php");
       } else {
          echo "Failed to insert data.";
       }
@@ -56,15 +57,17 @@ class Controller
    {
       $id = $_POST['id'];
       $data = array(
-        'total_stok' => $_POST['total_stok'],
-        'data_barang_id' => $_POST['data_barang_id']
-        
+         'costumer_id' => $_POST['costumer_id'],
+         'data_barang_id' => $_POST['data_barang_id'],
+         'admin_id' => $_POST['admin_id'],
+         'jumlah_transaksi' => $_POST['jumlah_transaksi'],
+         'tanggal_transaksi' => $_POST['tanggal_transaksi']
       );
       // var_dump($id,$data);
       $result = $this->model->update_data($id, $data);
       if ($result) {
          echo "<script>alert('test')</script>";
-         header("Location: ../controllers/controller_Stok.php");
+         header("Location: ../controllers/controller_Transaksi.php");
       } else {
          echo "Failed to update data.";
       }
@@ -77,7 +80,7 @@ class Controller
       $result = $this->model->delete_data($id);
       if ($result) {
 
-         header("Location:  ../controllers/controller_Stok.php"
+         header("Location:  ../controllers/controller_Transaksi.php"
       );
       } else {
          echo "Failed to delete data.";
