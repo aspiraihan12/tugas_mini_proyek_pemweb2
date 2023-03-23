@@ -48,7 +48,7 @@ class View {
         <tr>
         <td>Telepon</td>
         <td>:</td>
-        <td><input type='number' name='telepon'/></td>
+        <td><input type='text' name='telepon'/></td>
         </tr>";
 
         echo "
@@ -76,6 +76,7 @@ class View {
         </tr>";
 
         echo "
+       
         <tr>
         <td>Alamat</td>
         <td>:</td>
@@ -87,13 +88,15 @@ class View {
         <tr>
         <td>Telepon</td>
         <td>:</td>
-        <td><input type='number' name='telepon' value ='". $row['telepon']."'/></td>
+        <td><input type='text' name='telepon' value ='". $row['telepon']."'/></td>
         </tr>";
 
         echo "
         <tr colspan='3'>
         <td><input type='submit'/></td>
+   
         </tr>";
+     
         
 
         echo "</form></table>";
