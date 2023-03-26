@@ -21,7 +21,6 @@ if(!isset($_SESSION['name']))
 <body>
     
     <!-- header select start -->
-
     <header>
         <input type="checkbox" name="" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
