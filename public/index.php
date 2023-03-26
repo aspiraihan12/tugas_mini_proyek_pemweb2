@@ -36,7 +36,7 @@ if(!isset($_SESSION['name']))
         </nav>
 
         <div class="icons">
-            <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="fas fa-shopping-cart"></a>
+            <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="fas fa-shopping-cart"></a>
             <a style="text-decoration:none; font-size:16px;" class="fa-sharp fa-solid fa-user" href="login.php"> Login</a>
         </div>
     </header>
@@ -78,8 +78,8 @@ if(!isset($_SESSION['name']))
 
         <div class="content">
             <h3>why choose us</h3>
-            <p>Selamat datang di situs resmi adidas Indonesia di mana Anda dapat membeli perlengkapan dan aksesori olahraga berkualitas. Toko Online Resmi adidas Indonesia menyediakan produk terbaik mulai dari sepatu olahraga, dan sneaker, hingga aksesori olahraga lainnya untuk semua kebutuhan Anda. Tersedia berbagai macam sepatu yang cocok untuk setiap momen dan nyaman dipakai saat berolahraga.</p>
-            <p> Di Toko Online Resmi adidas Indonesia. Toko Online Resmi adidas terus memperbarui daftar produknya sehingga Anda dapat membeli koleksi sepatu, pakaian, aksesori olahraga terbaru kami. Temukan sepatu favorit Anda mulai dari sepatu untuk pria, wanita, dan anak-anak hanya di toko online resmi kami...</p>
+            <p>Selamat datang di situs resmi Toko Sepatu Indonesia di mana Anda dapat membeli berbagai macam jenis sepatu, mulai dari sepatu olahraga berkualitas hingga jenis sepatu lainnya. Toko Online Resmi Toko Sepatu Indonesia menyediakan produk terbaik mulai dari sepatu olahraga, dan sneaker, hingga aksesori olahraga lainnya untuk semua kebutuhan Anda. Tersedia berbagai macam sepatu yang cocok untuk setiap momen dan nyaman dipakai saat berolahraga.</p>
+            <p> Di Toko Online Resmi Toko Sepatu Indonesia. Toko Sepatu Online Resmi terus memperbarui daftar produknya sehingga Anda dapat membeli koleksi berbagai macam sepatu trending dan terbaru. Temukan sepatu favorit Anda mulai dari sepatu untuk pria, wanita, dan anak-anak hanya di toko sepatu online resmi kami...</p>
         </div>
 
     </div>
@@ -97,9 +97,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-10%</span> -->
             <div class="image">
-                <img src="assets/img/adidass.jpeg" alt="">
+                <img src="assets/img/adidass.jpeg">
                 <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
+                    <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -111,9 +111,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-15%</span> -->
             <div class="image">
-                <img src="assets/img/puma.png" alt="">
+                <img src="assets/img/puma.png">
                 <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
+                    <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -125,9 +125,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-5%</span> -->
             <div class="image">
-                <img src="assets/img/converse.png" alt="">
+                <img src="assets/img/converse.png">
                 <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
+                    <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -139,9 +139,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-20%</span> -->
             <div class="image">
-                <img src="assets/img/ventela.jpeg" alt="">
+                <img src="assets/img/ventela.jpeg">
                 <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
+                    <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -153,9 +153,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-17%</span> -->
             <div class="image">
-                <img src="assets/img/chaoyun.jpeg" alt="">
+                <img src="assets/img/chaoyun.jpeg">
                 <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
+                    <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -167,9 +167,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-3</span> -->
             <div class="image">
-                <img src="assets/img/vans.jpeg" alt="">
+                <img src="assets/img/vans.jpeg">
                 <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
+                    <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -181,9 +181,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-18%</span> -->
             <div class="image">
-                <img src="assets/img/Sorella.jpeg" alt="">
+                <img src="assets/img/Sorella.jpeg">
                 <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn" >add to cart</a>
+                    <a onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn" >add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -195,9 +195,9 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <!-- <span class="discount">-19%</span> -->
             <div class="image">
-                <img src="assets/img/rupaka.jpeg" alt="">
+                <img src="assets/img/rupaka.jpeg">
                 <div class="icons">
-                    <a  onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
+                    <a  onClick='alert("Silahkan login/registrasi terlebih dahulu jika ingin memasukkan barang ke keranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
                 </div>
             </div>
             <div class="content">
@@ -232,9 +232,9 @@ if(!isset($_SESSION['name']))
         <p>Tokonya sangat lengkap dan bagus. Baik dari keramahan penjual, barang-barang yang berkualitas dan sangat lengkap.</p>
         <br></br><br></br><br></br>
         <div class="user">
-            <img src="IMG/pic-1.png" alt="">
+            <img src="assets/img/Fatimah Azzahra Maulida.jpeg">
             <div class="user-info">
-                <h3>Ara anak Piyik</h3>
+                <h3>Fatimah Azzahra Maulida</h3>
                 <span>happy customer</span>
             </div>
         </div>
@@ -252,7 +252,7 @@ if(!isset($_SESSION['name']))
         <p>Tokonya sangat cantik, lucu, dan lengkap. Sepatunya berkualitas tinggi, sangat bagus dan nyaman digunakan.</p>
         <br></br><br></br><br></br>
         <div class="user">
-            <img src="IMG/pic-2.png" alt="">
+            <img src="assets/img/Maysarah.jpeg">
             <div class="user-info">
                 <h3>Maysarah</h3>
                 <span>happy customer</span>
@@ -272,10 +272,64 @@ if(!isset($_SESSION['name']))
         <p>Sudah langganan ditoko ini. Pelayanannya bagus dan ramah, membuat saya menjadi senang belanja disini.</p>
         <br></br><br></br><br>
         <div class="user">
-            <img src="IMG/pic-3.png" alt="">
+            <img src="assets/img/Maisya Puspita Sari.jpeg">
             <div class="user-info">
-                <h3>Maisya</h3>
+                <h3>Maisya Puspita Sari</h3>
                 <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Tokonya sangat lengkap dan bagus. Barang-barang yang dijual berkualitas. Bakal jadi langganan belanja di toko ini.</p>
+        <br></br><br></br><br></br>
+        <div class="user">
+            <img src="assets/img/Risma Wulandari.jpeg">
+            <div class="user-info">
+                <h3>Risma Wulandari</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Saya salah pilih ukuran, jadinya kekecilan.</p>
+        <br></br><br></br><br></br><br></br><br></br>
+        <div class="user">
+            <img src="assets/img/Najwan.jfif">
+            <div class="user-info">
+                <h3>M. Najwan Nur Iman</h3>
+                <span>sad customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Tiba-tiba barang datang kerumah, ternyata anak saya yang memesan tanpa pengetahuan saya.</p>
+        <br></br><br></br><br></br><br></br>
+        <div class="user">
+            <img src="assets/img/Aspi.jfif">
+            <div class="user-info">
+                <h3>Aspi Raihan</h3>
+                <span>angry customer</span>
             </div>
         </div>
         <span class="fas fa-quote-right"></span>
@@ -294,10 +348,16 @@ if(!isset($_SESSION['name']))
     <div class="box-container">
         <div class="box">
             <h3>contact info</h3>
+<<<<<<< HEAD
             <a style="text-decoration:none" href="#" class="fa-solid fa-square-phone">  0822-5553-6627</a>
             <a style="text-decoration:none" href="#" class="fa-solid fa-envelope"> azh@gmail.com</a>
             <a style="text-decoration:none" href="#" class="fa-sharp fa-solid fa-location-dot"> Jl. Brigjen Jalan Hasan Basri, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70123</a>
             <img src="IMG/payment.png" alt="">
+=======
+            <a style="text-decoration:none" class="fa-solid fa-square-phone">  0852-4433-2211</a>
+            <a style="text-decoration:none" class="fa-solid fa-envelope"> tokosepatu_XII@gmail.com</a>
+            <a style="text-decoration:none" class="fa-sharp fa-solid fa-location-dot"> Jl. Trans Kalimantan Komplek Persada Raya 6 Jalur 2B No.5, Handil Bakti, Kalimantan Selatan, Indonesia.</a>
+>>>>>>> 5042e3e500cf20f09bbe00232309a7ffac2347b5
         </div>
 
     </div>
@@ -306,5 +366,8 @@ if(!isset($_SESSION['name']))
         created by <span> <b>kELOMPOK 4</b> </span> | all rights reserved </div>
 
 </section>
+
+<!-- footer section ends -->
+
 </body>
 </html>
