@@ -17,6 +17,8 @@ class Model {
     public function index() {
         $conn = $this->connect();
         $result = $conn->query("SELECT * FROM transaksi");
+        // $result = $conn->query("SELECT transaksi.id, costumer.name, transaksi.tanggal_transaksi FROM transaksi INNER JOIN costumer ON costumer.id=transaksi.costumer_id");
+        
         $data = array();
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;
