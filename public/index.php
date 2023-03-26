@@ -1,9 +1,3 @@
-<?php
-if(!isset($_SESSION['name']))
-{
-  session_start();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

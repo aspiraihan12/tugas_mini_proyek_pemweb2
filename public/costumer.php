@@ -54,7 +54,7 @@ if(!isset($_SESSION['name']))
             <span>Berbagai model sepatu yang menarik dan berkualitas</span>
             <p>Berlokasi di Jalan Trans Kalimantan Komplek Persada Raya 6 Jalur 2B No.5, Handil Bakti, Kalimantan Selatan, Indonesia.</p>
             <p>LOGIN SEBAGAIz : <?=isset($_SESSION['name']) ? $_SESSION['name'] : "tamu"?><?= isset($_SESSION['admin']) && $_SESSION['admin']==1 ? ", admin" : ", customerz"?></p>
-            <a style="text-decoration:none" href="login.php" class="btn">shop now</a>
+            <a style="text-decoration:none" href="#products" class="btn">shop now</a>
         </div>
         <div class="video-container">
             <video src="assets/img/shoes.mov" loop autoplay muted></video>

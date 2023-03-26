@@ -26,7 +26,7 @@
             </tr>
         </thead>
         <?php
-        include "functions.php";
+        
         $no = 1;
         $query = mysqli_query($koneksi, 'SELECT * FROM transaksi');
         while ($data = mysqli_fetch_array($query)) {
