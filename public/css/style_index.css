@@ -196,6 +196,7 @@ header .fa-bars{
     padding: .5rem 0;
     padding-top: 1rem;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .icons-container{
