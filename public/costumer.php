@@ -282,6 +282,26 @@ if(!isset($_SESSION['name']))
         <span class="fas fa-quote-right"></span>
     </div>
 
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Tokonya sangat lengkap dan bagus. Barang-barang yang dijual berkualitas. Bakal jadi langganan belanja di toko ini.</p>
+        <br></br><br></br><br></br>
+        <div class="user">
+            <img src="IMG/pic-1.png" alt="">
+            <div class="user-info">
+                <h3>Rismawndri</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
 </div>
 
 </section>
@@ -307,5 +327,8 @@ if(!isset($_SESSION['name']))
         created by <span> <b>kELOMPOK 4</b> </span> | all rights reserved </div>
 
 </section>
+
+<!-- footer section ends -->
+
 </body>
 </html>
