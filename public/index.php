@@ -232,9 +232,9 @@ if(!isset($_SESSION['name']))
         <p>Tokonya sangat lengkap dan bagus. Baik dari keramahan penjual, barang-barang yang berkualitas dan sangat lengkap.</p>
         <br></br><br></br><br></br>
         <div class="user">
-            <img src="IMG/pic-1.png">
+            <img src="assets/img/Fatimah Azzahra Maulida.jpeg">
             <div class="user-info">
-                <h3>Ara anak Piyik</h3>
+                <h3>Fatimah Azzahra Maulida</h3>
                 <span>happy customer</span>
             </div>
         </div>
@@ -252,7 +252,7 @@ if(!isset($_SESSION['name']))
         <p>Tokonya sangat cantik, lucu, dan lengkap. Sepatunya berkualitas tinggi, sangat bagus dan nyaman digunakan.</p>
         <br></br><br></br><br></br>
         <div class="user">
-            <img src="IMG/pic-2.png">
+            <img src="assets/img/Maysarah.jpeg">
             <div class="user-info">
                 <h3>Maysarah</h3>
                 <span>happy customer</span>
@@ -272,9 +272,9 @@ if(!isset($_SESSION['name']))
         <p>Sudah langganan ditoko ini. Pelayanannya bagus dan ramah, membuat saya menjadi senang belanja disini.</p>
         <br></br><br></br><br>
         <div class="user">
-            <img src="IMG/pic-3.png">
+            <img src="assets/img/Maisya Puspita Sari.jpeg">
             <div class="user-info">
-                <h3>Maisya</h3>
+                <h3>Maisya Puspita Sari</h3>
                 <span>happy customer</span>
             </div>
         </div>
@@ -292,10 +292,44 @@ if(!isset($_SESSION['name']))
         <p>Tokonya sangat lengkap dan bagus. Barang-barang yang dijual berkualitas. Bakal jadi langganan belanja di toko ini.</p>
         <br></br><br></br><br></br>
         <div class="user">
-            <img src="IMG/pic-1.png">
+            <img src="assets/img/Risma Wulandari.jpeg">
             <div class="user-info">
-                <h3>Rismawndri</h3>
+                <h3>Risma Wulandari</h3>
                 <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Saya salah pilih ukuran, jadinya kekecilan.</p>
+        <br></br><br></br><br></br><br></br><br></br>
+        <div class="user">
+            <img src="assets/img/Najwan.jfif">
+            <div class="user-info">
+                <h3>M. Najwan Nur Iman</h3>
+                <span>sad customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Tiba-tiba barang datang kerumah, ternyata anak saya yang memesan tanpa pengetahuan saya.</p>
+        <br></br><br></br><br></br><br></br>
+        <div class="user">
+            <img src="assets/img/Aspi.jfif">
+            <div class="user-info">
+                <h3>Aspi Raihan</h3>
+                <span>angry customer</span>
             </div>
         </div>
         <span class="fas fa-quote-right"></span>
@@ -314,10 +348,9 @@ if(!isset($_SESSION['name']))
     <div class="box-container">
         <div class="box">
             <h3>contact info</h3>
-            <a style="text-decoration:none" href="#" class="fa-solid fa-square-phone">  0822-5553-6627</a>
-            <a style="text-decoration:none" href="#" class="fa-solid fa-envelope"> tokosepatu_XII@gmail.com</a>
-            <a style="text-decoration:none" href="#" class="fa-sharp fa-solid fa-location-dot"> Jl. Brigjen Jalan Hasan Basri, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70123</a>
-            <img src="IMG/payment.png">
+            <a style="text-decoration:none" class="fa-solid fa-square-phone">  0852-4433-2211</a>
+            <a style="text-decoration:none" class="fa-solid fa-envelope"> tokosepatu_XII@gmail.com</a>
+            <a style="text-decoration:none" class="fa-sharp fa-solid fa-location-dot"> Jl. Trans Kalimantan Komplek Persada Raya 6 Jalur 2B No.5, Handil Bakti, Kalimantan Selatan, Indonesia.</a>
         </div>
 
     </div>
