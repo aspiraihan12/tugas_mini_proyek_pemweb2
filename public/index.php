@@ -295,7 +295,7 @@ if(!isset($_SESSION['name']))
         <div class="box">
             <h3>contact info</h3>
             <a style="text-decoration:none" href="#" class="fa-solid fa-square-phone">  0822-5553-6627</a>
-            <a style="text-decoration:none" href="#" class="fa-solid fa-envelope"> azhpetshop@gmail.com</a>
+            <a style="text-decoration:none" href="#" class="fa-solid fa-envelope"> azh@gmail.com</a>
             <a style="text-decoration:none" href="#" class="fa-sharp fa-solid fa-location-dot"> Jl. Brigjen Jalan Hasan Basri, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70123</a>
             <img src="IMG/payment.png" alt="">
         </div>

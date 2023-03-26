@@ -1,7 +1,12 @@
 <?php
 
-include_once('../models/model_Costumer.php');
-include_once('../views/view_Costumer.php');
+include_once('C:/xampp/htdocs/tugas_mini_proyek_pemweb2-main2/app/models/model_Costumer.php');
+include_once('C:/xampp/htdocs/tugas_mini_proyek_pemweb2-main2/app/views/view_Costumer.php');
+// include_once('../tugas_mini_proyek_pemweb2-main2/public/register.php');
+
+// include_once('../models/model_Costumer.php');
+// include_once('../views/view_Costumer.php');
+// include_once('../tugas_mini_proyek_pemweb2-main2/public/register.php');
 
 class Controller
 {
@@ -17,7 +22,7 @@ class Controller
    public function index()
    {
       $data = $this->model->index();
-      $this->view->index($data);
+      // $this->view->index($data);
    }
 
 
@@ -80,6 +85,51 @@ class Controller
       } else {
          echo "Failed to delete data.";
       }
+   }
+}
+
+ function register(){
+   error_reporting(E_ALL);
+   ini_set('display_errors', 'On');
+
+
+   session_start();
+
+   if (isset($_SESSION['name'])) {
+       header("Location: login.php");
+   }
+
+   if (isset($_POST['submit'])) {
+       $name = $_POST['name'];
+       $email = $_POST['email'];
+       $password = md5($_POST['password']);
+      //  echo "<script>alert('$email')</script>";
+
+       // if ($password == $cpassword) {
+       $sql = "SELECT * FROM costumer WHERE email='$email'";
+       $conn = new mysqli('localhost', 'root', '', 'toko_sepatu');
+       $result = mysqli_query($conn, $sql);
+      //  echo "<script>alert('bruh 1 selcect')</script>";
+       if (!$result->num_rows > 0) {
+           $sql = "INSERT INTO costumer (name, email, password)
+               VALUES ('$name', '$email', '$password')";
+           $result = mysqli_query($conn, $sql);
+           if ($result) {
+               
+               // echo "<script>alert('Selamat, registrasi berhasil!')</script>";
+               
+               // $name = "";
+               // $email = "";
+               // $_POST['password'] = "";
+               return 1;
+           } else {
+               echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
+               echo mysqli_error($conn);
+           }
+       } else {
+         //   echo "<script>alert('Woops! Email Sudah Terdaftar.')</script>";
+           return 0;
+       }
    }
 }
 

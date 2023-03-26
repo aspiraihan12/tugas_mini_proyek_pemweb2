@@ -9,26 +9,9 @@ ini_set('display_errors', 'On');
 session_start();
 
 // if (isset($_SESSION['name'])) {
-//     header("Location: costumer.php");
+//     header("Location: controllers/controller_Databarang.php");
 // }
 
-// if (isset($_POST['submit'])) {
-//     $email = $_POST['email'];
-//     $password = md5($_POST['password']);
-//     $conn = new mysqli('localhost', 'root', '', 'toko_sepatu');
-//     var_dump($email, $password);
-//     $sql = "SELECT * FROM costumer WHERE email='$email' AND password='$password'";
-//     $result = mysqli_query($conn, $sql);
-//     if ($result->num_rows > 0) {
-//         $row = mysqli_fetch_assoc($result);
-//         $_SESSION['name'] = $row['name'];
-//         echo "<script>alert('DATA : $row)</script>";
-//         $_SESSION['email'] = $row['email'];
-//         header("Location: costumer.php");
-//     } else {
-//         echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
-//     }
-// }
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = md5($_POST['password']);
@@ -48,9 +31,9 @@ if (isset($_POST['submit'])) {
             echo '</script>';
             header("Location: ../app/controllers/controller_Databarang.php");
         }else{
-            unset($_SESSION['admin']);
+            $_SESSION['admin'] = false;
             echo '<script language="javascript">';
-            echo 'alert("message successfully sent akun biasa")';
+            echo 'alert("message successfully sent")';
             echo '</script>';
             header("Location: ../public/costumer.php");
         }
@@ -59,6 +42,7 @@ if (isset($_POST['submit'])) {
         header("Location: login.php");
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +54,7 @@ if (isset($_POST['submit'])) {
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/style_login.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style_login.css">
 
     <title>Login</title>
 </head>
@@ -82,7 +66,7 @@ if (isset($_POST['submit'])) {
 
     <div class="container">
         <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Login Admin</p>
             <div class="input-group">
                 <!-- <input type="email" placeholder="Email" name="email" value="<?php //echo $email; 
                                                                                     ?>" required> -->
@@ -94,7 +78,7 @@ if (isset($_POST['submit'])) {
             <div class="input-group">
                 <button name="submit" class="btn">Login</button>
             </div>
-            <p class="login-register-text">Anda belum punya akun? <a href="register.php">Register</a></p>
+           
         </form>
     </div>
 </body>

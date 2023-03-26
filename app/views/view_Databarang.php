@@ -1,3 +1,4 @@
+<style><?php include "../views/css/styleAdmin.css"; ?></style>
 <?php
 
 class View {
@@ -49,7 +50,7 @@ class View {
         <tr>
         <td>img</td>
         <td>:</td>
-        <td><input type='text' name='img'/></td>
+        <td><input type='file' name='img'/></td>
         </tr>";
 
         echo "
@@ -114,7 +115,7 @@ class View {
         <tr>
         <td>img</td>
         <td>:</td>
-        <td><input type='text' name='img' value ='". $row['img']."'/></td>
+        <td><input type='file' name='img' value ='". $row['img']."'/></td>
         </tr>";
 
         echo "

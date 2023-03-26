@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2023 at 05:56 PM
+-- Generation Time: Mar 26, 2023 at 07:47 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -51,15 +51,52 @@ CREATE TABLE `costumer` (
   `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `costumer`
 --
 
-INSERT INTO `costumer` (`id`, `name`, `email`, `password`) VALUES
-(1, 'rehan', 'rehan@gmail.com', 'costumer1');
+INSERT INTO `costumer` (`id`, `name`, `email`, `password`, `is_admin`) VALUES
+(1, 'rehan', 'rehan@gmail.com', 'costumer1', 0),
+(3, '123', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 0),
+(4, 'aan', 'aan@gmail.com', '59c6f802008a2f455463881a9eec338d', 0),
+(5, 'najwan@gmail.com', 'najwan@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(6, 'aspi', 'aspi@gmail.com', '202cb962ac59075b964b07152d234b70', 1),
+(7, 'amat', 'amat@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(8, 'patimah', 'patimah@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(9, 'aspiraihan', 'as@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(10, 'ari', 'ari@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(11, 'akang', 'akang@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(12, 'bandi', 'ba@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(13, 'dum', 'dum@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(14, 'miranda', 'mira@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(15, '1234', '1234@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(16, '43', '43@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(17, '12', '12@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 0),
+(18, 'asdas', 'asdas@gmail.com', '0aa1ea9a5a04b78d4581dd6d17742627', 0),
+(19, 'aspiraihan', 'aspiraihannn@gmail.com', '4b1421f74d7f44b9ee76a24ec1806942', 0),
+(20, 'bruh@123.com', 'bruh@123.com', '546b7f2342d772f7568a0e8692d6d643', 0),
+(21, 'c@123.com', 'c@123.com', 'bd075e55cf3949fe13158ac8b47b91ec', 0),
+(22, 'd@123.com', 'd@123.com', 'a5702903fa5966799e9200b36d4ee7cc', 0),
+(23, '123@456.co', '123@456.co', 'af05cbc07ef4abef4291aebfe75acd10', 0),
+(24, '159159@159.co', '159159@159.co', 'de4989db09c567505ed67ead298ec146', 0),
+(25, 'brojx@123.co', 'brojx@123.co', '5cadba34999db7d193fea73957e706a7', 0),
+(26, 'xyz@123.123', 'xyz@123.123', 'b34df84cbf374df53e206b2eaf344631', 0),
+(27, 'warning@warning.c', 'warning@warning.c', 'c92203856596ac1e8a4f06e7f95ba6be', 0),
+(28, 'bsfjud@sdgj.1', 'bsfjud@sdgj.1', '3d95041140bac4f6c4e3511bfe45e28c', 0),
+(29, '123@123.cozx', '123@123.cozx', 'b07c63be30d82848f38c5be8b6a3d213', 0),
+(30, '123@123.cozxz', '123@123.cozxz', '3e3d5d3909ecf9e26f61a7e125d1595e', 0),
+(31, 'anjay', 'anjay123@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(32, 'mantap', 'mantap@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(33, 'mmang', 'mmang@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(34, 'malam', 'malam@gmail.com', 'a4d1246865be651de324ce46b022e755', 0),
+(35, 'asd', 'sanah@gmail.com', '5218acc88f079400bdddaf77fcdf5f48', 0),
+(36, 'sd', 'sd@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(37, 'sda', 'sanah@gsmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(38, 'pedih', 'pedih@gmail.com', '424afddc966b9e446f14acea683cd33e', 0);
 
 -- --------------------------------------------------------
 
@@ -80,7 +117,8 @@ CREATE TABLE `data_barang` (
 --
 
 INSERT INTO `data_barang` (`id`, `nama_barang`, `harga_barang`, `img`, `distributor_id`) VALUES
-(1, 'Sepatu Yeezi', 950, 'adidas.jpg', 1);
+(1, 'Sepatu Yeezi', 950, 'adidass.jpeg', 1),
+(2, 'Puma', 22000, 'puma.png', 1);
 
 -- --------------------------------------------------------
 
@@ -144,7 +182,8 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id`, `costumer_id`, `data_barang_id`, `admin_id`, `jumlah_transaksi`, `tanggal_transaksi`) VALUES
-(1, 1, 1, 1, 1, '2023-03-19');
+(1, 1, 1, 1, 1, '2023-03-19'),
+(7, 1, 1, 1, 0, '2023-04-01');
 
 --
 -- Indexes for dumped tables
@@ -205,7 +244,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `costumer`
 --
 ALTER TABLE `costumer`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `data_barang`
@@ -229,7 +268,7 @@ ALTER TABLE `stok`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

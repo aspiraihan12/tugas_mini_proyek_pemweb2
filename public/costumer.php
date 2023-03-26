@@ -10,7 +10,7 @@ if(!isset($_SESSION['name']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>User Login</title>
 
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -33,12 +33,12 @@ if(!isset($_SESSION['name']))
             <a style="text-decoration:none" href="#about">About</a>
             <a style="text-decoration:none" href="#products">Products</a>
             <a style="text-decoration:none" href="#review">Review</a>
+            <!-- <a style="text-decoration:none" href="transaksi.php">Transaksi</a> -->
         </nav>
 
         <div class="icons">
-            <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="fas fa-shopping-cart"></a>
+            <a onClick='alert("Fitur Belum tersedia!!!, silahkan memesan lewat nohub")' style="text-decoration:none" href="#" class="fas fa-shopping-cart"></a>
             <a style="text-decoration:none" href="logout.php" onclick="return confirm('Apakah anda yakin ingin keluar ?')" class="fas fa-sign-out"></a>
-            <a style="text-decoration:none; font-size:16px;" class="fa-sharp fa-solid fa-user" href="login.php"> Login</a>
         </div>
     </header>
 
@@ -51,10 +51,10 @@ if(!isset($_SESSION['name']))
     <section class="home" id="home">
 
         <div class="content">
-            <h3>TOKO SEPATU</h3>
-            <span>Berbagai model sepatu yang menarik dan berkualitas </span>
+            <h3>TOKO SEPATUs</h3>
+            <span>Berbagai model sepatu yang menarik dan berkualitas</span>
             <p>Berlokasi di Jalan Trans Kalimantan Komplek Persada Raya 6 Jalur 2B No.5, Handil Bakti, Kalimantan Selatan, Indonesia.</p>
-            <p>LOGIN SEBAGAI : <?=isset($_SESSION['name']) ? $_SESSION['name'] : "tamu"?></p>
+            <p>LOGIN SEBAGAIz : <?=isset($_SESSION['name']) ? $_SESSION['name'] : "tamu"?><?= isset($_SESSION['admin']) && $_SESSION['admin']==1 ? ", admin" : ", customerz"?></p>
             <a style="text-decoration:none" href="login.php" class="btn">shop now</a>
         </div>
         <div class="video-container">
@@ -95,8 +95,8 @@ if(!isset($_SESSION['name']))
 
     <div class="box-container">
 
-        <div class="box">
-            <!-- <span class="discount">-10%</span> -->
+        <!-- <div class="box">
+            <span class="discount">-10%</span>
             <div class="image">
                 <img src="assets/img/adidass.jpeg" alt="">
                 <div class="icons">
@@ -107,107 +107,29 @@ if(!isset($_SESSION['name']))
                 <h3>Adidas</h3>
                 <div class="price"> 21.000,00 <span>25.000,00</span> </div>
             </div>
-        </div>
-
+        </div>  -->
+    <?php 
+    $link = mysqli_connect("localhost", "root", "", "toko_sepatu");
+    $query = mysqli_query($link, "SELECT * FROM data_barang"); 
+    while ($row = $query->fetch_assoc()) { ?>
         <div class="box">
-            <!-- <span class="discount">-15%</span> -->
             <div class="image">
-                <img src="assets/img/puma.png" alt="">
-                <div class="icons">
+                <img src="assets/img/<?= $row["img"]?>" alt="">
+                <dsiv class="icons">
                     <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
-                </div>
+                </dsiv>
             </div>
             <div class="content">
-                <h3>Puma</h3>
-                <div class="price"> 22.000,00 <span>26.000,00</span> </div>
+                <h3><?= $row["nama_barang"] ?></h3>
+                <div class="price"> <?= $row["harga_barang"] ?> <span>25.000,00</span> </div>
             </div>
         </div>
+    <?php } ?>
 
-        <div class="box">
-            <!-- <span class="discount">-5%</span> -->
-            <div class="image">
-                <img src="assets/img/converse.png" alt="">
-                <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Converse</h3>
-                <div class="price"> 21.000,00 <span>26.000,00</span> </div>
-            </div>
-        </div>
 
-        <div class="box">
-            <!-- <span class="discount">-20%</span> -->
-            <div class="image">
-                <img src="assets/img/ventela.jpeg" alt="">
-                <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Ventela</h3>
-                <div class="price"> 18.000,00 <span>21.000,00</span> </div>
-            </div>
-        </div>
+        
 
-        <div class="box">
-            <!-- <span class="discount">-17%</span> -->
-            <div class="image">
-                <img src="assets/img/chaoyun.jpeg" alt="">
-                <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Chaoyun</h3>
-                <div class="price"> 15.000,00 <span>18.000,00</span> </div>
-            </div>
-        </div>
 
-        <div class="box">
-            <!-- <span class="discount">-3</span> -->
-            <div class="image">
-                <img src="assets/img/vans.jpeg" alt="">
-                <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Vans</h3>
-                <div class="price"> 24.000,00<span>28.000,00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <!-- <span class="discount">-18%</span> -->
-            <div class="image">
-                <img src="assets/img/Sorella.jpeg" alt="">
-                <div class="icons">
-                    <a onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn" >add to cart</a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Sorella</h3>
-                <div class="price"> 23.000,00 <span>25.000,00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <!-- <span class="discount">-19%</span> -->
-            <div class="image">
-                <img src="assets/img/rupaka.jpeg" alt="">
-                <div class="icons">
-                    <a  onClick='alert("Silahkan login/regis jika ingin memasukkan barang kekeranjang")' style="text-decoration:none" href="#" class="cart-btn">add to cart</a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Rupaka</h3>
-                <div class="price"> 21.000,00 <span>26.000,00</span> </div>
-            </div>
-        </div>
-
-      
     </div>
 
 </section>
