@@ -10,7 +10,11 @@ class View {
         <li class='content'><a href='controller_Stok.php'>Stok</a></li>
         <li class='content'><a href='controller_Costumer.php'>Costumer</a></li>
         <li class='content'><a href='controller_Distri.php'>Distributor</a></li>
+<<<<<<< HEAD
+        <li class='content'><a href='controller_Transaksi.php' target='_blank'>Transaksi</a></li>
+=======
         <li class='content'><a href='controller_Transaksi.php'>Transaksi</a></li>
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
         <li class='content'><a href='../../public/logout.php'>Logout</a></li>
         </ul></nav>";
 
@@ -24,9 +28,15 @@ class View {
         foreach ($data as $row) {
             echo "<tr>";
             echo "<td class='id'>" . $row['id'] . "</td>";
+<<<<<<< HEAD
+            echo "<td class='id'>" . $row['name'] . "</td>";
+            echo "<td class='id'>" . $row['email'] . "</td>";
+            echo "<td class='id'>" . $row['password'] . "</td>";
+=======
             echo "<td>" . $row['name'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['password'] . "</td>";
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
             echo "<td class='edit'><a class='edit' href='controller_admin.php?page=edit&id=" . $row['id'] . "'>Edit</a></td>";
             echo "<td class='delete'><a class='delete' href='controller_admin.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";

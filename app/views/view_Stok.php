@@ -9,7 +9,11 @@ class View {
         <li class='content'><a href='controller_Stok.php'>Stok</a></li>
         <li class='content'><a href='controller_Costumer.php'>Costumer</a></li>
         <li class='content'><a href='controller_Distri.php'>Distributor</a></li>
+<<<<<<< HEAD
+        <li class='content'><a href='controller_Transaksi.php' target='_blank'>Transaksi</a></li>
+=======
         <li class='content'><a href='controller_Transaksi.php'>Transaksi</a></li>
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
         <li class='content'><a href='../../public/logout.php'>Logout</a></li>
         </ul></nav>";
 
@@ -18,7 +22,11 @@ class View {
         <th>ID</th>
         <th>data barang id</th>
         <th>Total Stok</th>
+<<<<<<< HEAD
+        <th colspan='2'>Action</th></tr>";
+=======
         <th colspan='2'>Action</th>";
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
         foreach ($data as $row) {
             echo "<tr>";
             echo "<td class='id'>" . $row['id'] . "</td>";

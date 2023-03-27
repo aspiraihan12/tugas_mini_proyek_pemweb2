@@ -1,12 +1,10 @@
 <?php
 
-include_once('C:/xampp/htdocs/tugas_mini_proyek_pemweb2-main2/app/models/model_Costumer.php');
-include_once('C:/xampp/htdocs/tugas_mini_proyek_pemweb2-main2/app/views/view_Costumer.php');
 // include_once('../tugas_mini_proyek_pemweb2-main2/public/register.php');
 
-// include_once('../models/model_Costumer.php');
-// include_once('../views/view_Costumer.php');
-// include_once('../tugas_mini_proyek_pemweb2-main2/public/register.php');
+require_once('../models/model_Costumer.php');
+require_once('../views/view_Costumer.php');
+// require_once('../../public/register.php');
 
 class Controller
 {
@@ -22,7 +20,7 @@ class Controller
    public function index()
    {
       $data = $this->model->index();
-      // $this->view->index($data);
+      $this->view->index($data);
    }
 
 
@@ -45,7 +43,8 @@ class Controller
       $data = array(
          'name' => $_POST['name'],
          'email' => $_POST['email'],
-         'password' => $_POST['password']
+         'password' => $_POST['password'],
+         'is_admin'=>$_POST['is_admin']
       );
       $result = $this->model->insert_data($data);
       if ($result) {
@@ -62,7 +61,8 @@ class Controller
       $data = array(
          'name' => $_POST['name'],
          'email' => $_POST['email'],
-         'password' => $_POST['password']
+         'password' => $_POST['password'],
+         'is_admin'=>$_POST['is_admin']
       );
       $result = $this->model->update_data($id, $data);
       if ($result) {
@@ -74,7 +74,7 @@ class Controller
    }
 
 
-   public function delete()
+   function delete()
    {
       $id = $_GET['id'];
       $result = $this->model->delete_data($id);
@@ -103,6 +103,7 @@ class Controller
        $name = $_POST['name'];
        $email = $_POST['email'];
        $password = md5($_POST['password']);
+       $is_admin = $_POST['is_admin'];
       //  echo "<script>alert('$email')</script>";
 
        // if ($password == $cpassword) {
@@ -111,8 +112,8 @@ class Controller
        $result = mysqli_query($conn, $sql);
       //  echo "<script>alert('bruh 1 selcect')</script>";
        if (!$result->num_rows > 0) {
-           $sql = "INSERT INTO costumer (name, email, password)
-               VALUES ('$name', '$email', '$password')";
+           $sql = "INSERT INTO costumer (name, email, password,is_admin)
+               VALUES ('$name', '$email', '$password','$is_admin')";
            $result = mysqli_query($conn, $sql);
            if ($result) {
                

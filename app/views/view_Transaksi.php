@@ -9,7 +9,12 @@ class View {
         <li class='content'><a href='controller_Stok.php'>Stok</a></li>
         <li class='content'><a href='controller_Costumer.php'>Costumer</a></li>
         <li class='content'><a href='controller_Distri.php'>Distributor</a></li>
+<<<<<<< HEAD
+        <li class='content'><a href='controller_Transaksi.php' target='_blank'>Transaksi (inner join)</a></li>
+        <li class='content'><a href='controller_Admin.php'>Admin</a></li>
+=======
         <li class='content'><a href='controller_Transaksi.php'>Transaksi</a></li>
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
         <li class='content'><a href='../../public/logout.php'>Logout</a></li>
         </ul></nav>";
 
@@ -21,7 +26,13 @@ class View {
         <th>admin_id</th>
         <th>jumlah transaksi</th>
         <th>tanggal transaksi</th>
+<<<<<<< HEAD
+        <th>nama</th>
+        <th>email</th>
+        <th colspan='2'>Action</th></tr>";
+=======
         <th colspan='2'>Action</th>";
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
         foreach ($data as $row) {
             echo "<tr>";
             echo "<td class='id'>" . $row['id'] . "</td>";
@@ -30,6 +41,11 @@ class View {
             echo "<td class='id'>" . $row['admin_id'] . "</td>";
             echo "<td class='id'>" . $row['jumlah_transaksi'] . "</td>";
             echo "<td>" . $row['tanggal_transaksi'] . "</td>";
+<<<<<<< HEAD
+            echo "<td class='id'>" . $row['name'] . "</td>";
+            echo "<td class='id'>" . $row['email'] . "</td>";
+=======
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
             echo "<td class='edit'><a class='edit' href='controller_Transaksi.php?page=edit&id=" . $row['id'] . "'>Edit</a></td>";
             echo "<td class='delete'><a class='delete' href='controller_Transaksi.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";

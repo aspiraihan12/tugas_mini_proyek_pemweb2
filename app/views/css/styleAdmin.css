@@ -1,10 +1,139 @@
+<<<<<<< HEAD
+a{
+  text-decoration: none;
+  margin: 10px;
+}
+=======
   a{
     text-decoration: none;
     margin: 10px;
   }
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
 
 /* 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+} */
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+nav ul li {
+  float: left;
+  list-style-type: none;
+  display: inline-block;
+  line-height: 100px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  margin: 5px;
+  padding: 14px 20px;
+  color: navy;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color : #fff;
+  background-color: navy;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+table th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+  word-wrap: break-word;
+  transition: all 0.3s ease-in-out;
+}
+
+.id {
+  text-align: center;
+}
+
+.edit {
+  text-align: center;
+  background-color: navy;
+  padding: 0;
+  width: 90px;
+  color: white;
+}
+
+.edit:hover {
+  background-color: navy;
+  cursor: pointer;
+}
+
+.delete {
+  text-align: center;
+  background-color: red;
+  padding: 0;
+  width: 90px;
+  color: white;
+}
+
+.delete:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+table td:hover, table th:hover {
+  background-color: #b6dfa5;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
   table {
+<<<<<<< HEAD
+    overflow-x: scroll;
+  }
+}
+
+ /* @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  table, th, td, tr {
+    display: block;
+  }
+
+  th tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+=======
     border-collapse: collapse;
     width: 100%;
     max-width: 600px;
@@ -58,16 +187,22 @@
 
   table tr:nth-child(odd) {
     background-color: #f2f2f2;
-  }
-  
-  table th, td {
-    text-align: left;
-    padding: 8px;
-    border: 1px solid #ddd;
-    word-wrap: break-word;
-    transition: all 0.3s ease-in-out;
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
   }
 
+  tr {
+    border: 1px solid;
+  }
+
+<<<<<<< HEAD
+  td {
+    border: none;
+    border-bottom: 1px solid;
+    position: relative;
+    padding-left: 50px;
+  }
+ } */
+=======
   .id {
     text-align: center;
   }
@@ -115,3 +250,4 @@
       overflow-x: scroll;
     }
   }
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47

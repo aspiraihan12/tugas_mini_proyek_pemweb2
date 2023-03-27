@@ -30,7 +30,7 @@ class Model
     public function insert_data($data)
     {
         $conn = $this->connect();
-        $sql = "INSERT INTO costumer (name, email, password) VALUES ('" . $data['name'] . "', '" . $data['email'] . "', '" . $data['password'] . "')";
+        $sql = "INSERT INTO costumer (name, email, password,is_admin) VALUES ('" . $data['name'] . "', '" . $data['email'] . "', '" . $data['password'] . "','" . $data['is_admin'] . "')";
         $result = $conn->query($sql);
         return $result;
     }
@@ -38,7 +38,7 @@ class Model
     public function update_data($id, $data)
     {
         $conn = $this->connect();
-        $sql = "UPDATE costumer SET name='" . $data['name'] . "', email='" . $data['email'] . "', password='" . $data['password'] . "' WHERE id=" . $id;
+        $sql = "UPDATE costumer SET name='" . $data['name'] . "', email='" . $data['email'] . "', password='" . $data['password'] . "', is_admin='" . $data['is_admin'] . "' WHERE id=" . $id;
         $result = $conn->query($sql);
         return $result;
     }
@@ -78,6 +78,7 @@ class Model
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = md5($_POST['password']);
+           
             echo "<script>alert('$email')</script>";
 
             // if ($password == $cpassword) {
@@ -86,7 +87,7 @@ class Model
             $result = mysqli_query($conn, $sql);
             echo "<script>alert('bruh 1 selcect')</script>";
             if (!$result->num_rows > 0) {
-                $sql = "INSERT INTO costumer (name, email, password)
+                $sql = "INSERT INTO costumer (name, email, password,is_admin)
                     VALUES ('$name', '$email', '$password')";
                 $result = mysqli_query($conn, $sql);
                 if ($result) {

@@ -9,7 +9,11 @@ class View {
         <li class='content'><a href='controller_Stok.php'>Stok</a></li>
         <li class='content'><a href='controller_Costumer.php'>Costumer</a></li>
         <li class='content'><a href='controller_Distri.php'>Distributor</a></li>
+<<<<<<< HEAD
+        <li class='content'><a href='controller_Transaksi.php' target='_blank'>Transaksi</a></li>
+=======
         <li class='content'><a href='controller_Transaksi.php'>Transaksi</a></li>
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
         <li class='content'><a href='../../public/logout.php'>Logout</a></li>
         </ul></nav>";
 
@@ -19,6 +23,16 @@ class View {
         <th>Nama</th>
         <th>Alamat</th>
         <th>Telepon</th>
+<<<<<<< HEAD
+        <th colspan='2'>Action</th></tr>";
+        foreach ($data as $row) {
+            echo "<tr>";
+            echo "<td class='id'>" . $row['id'] . "</td>";
+            echo "<td class='id'>" . $row['nama_distributor'] . "</td>";
+            echo "<td class='id'>" . $row['alamat'] . "</td>";
+            echo "<td class='id'>" . $row['telepon'] . "</td>";
+            echo "<td class='edit'><a class='edit' href='controller_Distri.php?page=edit&id=" . $row['id'] . "'>Edit</a></td>"; 
+=======
         <th colspan='2'>Action</th>";
         foreach ($data as $row) {
             echo "<tr>";
@@ -27,6 +41,7 @@ class View {
             echo "<td>" . $row['alamat'] . "</td>";
             echo "<td>" . $row['telepon'] . "</td>";
             echo "<td class='edit'><a class='edit' href='controller_Distri.php?page=edit&id=" . $row['id'] . "'>Edit</a></td>";
+>>>>>>> b461e31152a1c3eb89bd3b6f592a1b2e4cefbe47
             echo "<td class='delete'><a class='delete' href='controller_Distri.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";
         }

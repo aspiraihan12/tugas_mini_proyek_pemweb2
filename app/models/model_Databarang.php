@@ -16,7 +16,10 @@ class Model {
 
     public function index() {
         $conn = $this->connect();
-        $result = $conn->query("SELECT * FROM data_barang");
+        $result = $conn->query("SELECT *
+        FROM data_barang
+        INNER JOIN stok
+        ON data_barang.id = stok.data_barang_id");
         $data = array();
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;
