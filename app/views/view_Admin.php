@@ -4,31 +4,31 @@
 
 class View {
     public function index($data) {
-        echo "<table border='1'>";
-        echo "<tr>
-        <td colspan='10' >
-        <a href='?page=tambah'>Tambah</a>
-        <a href='controller_Databarang.php'>Data Barang</a>
-        <a href='controller_Stok.php'>Stok</a>
-        <a href='controller_Costumer.php'>Costumer</a>
-        <a href='controller_Distri.php'>Distributor</a>
-        <a href='controller_Transaksi.php'>Transaksi</a>
-        <a href='../../public/logout.php'>Logout</a>
-        </td>
-        </tr>";
-        echo "<tr>
+        echo "<nav><ul>
+        <li class='content'><a href='?page=tambah'>Tambah</a></li>
+        <li class='content'><a href='controller_Databarang.php'>Data Barang</a></li>
+        <li class='content'><a href='controller_Stok.php'>Stok</a></li>
+        <li class='content'><a href='controller_Costumer.php'>Costumer</a></li>
+        <li class='content'><a href='controller_Distri.php'>Distributor</a></li>
+        <li class='content'><a href='controller_Transaksi.php'>Transaksi</a></li>
+        <li class='content'><a href='../../public/logout.php'>Logout</a></li>
+        </ul></nav>";
+
+        echo "<table border='1'>
+        <tr>
         <th>ID</th>
         <th>name</th>
         <th>email</th>
         <th>password</th>
-        <th>Action</th></tr>";
+        <th colspan='2'>Action</th></tr>";
         foreach ($data as $row) {
             echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
+            echo "<td class='id'>" . $row['id'] . "</td>";
             echo "<td>" . $row['name'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['password'] . "</td>";
-            echo "<td><a href='controller_admin.php?page=edit&id=" . $row['id'] . "'>Edit</a> | <a href='controller_admin.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
+            echo "<td class='edit'><a class='edit' href='controller_admin.php?page=edit&id=" . $row['id'] . "'>Edit</a></td>";
+            echo "<td class='delete'><a class='delete' href='controller_admin.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -115,4 +115,3 @@ class View {
 }
 }
 ?>
-
