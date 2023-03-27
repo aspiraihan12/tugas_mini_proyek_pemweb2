@@ -1,10 +1,19 @@
+<style><?php include "../views/css/styleAdmin.css"; ?></style>
 <?php
 
 class View {
     public function index($data) {
         echo "<table border='1'>";
         echo "<tr>
-        <td colspan='5'><a href='?page=tambah'>Tambah</a></td>
+        <td colspan='10' >
+        <a href='?page=tambah'>Tambah</a>
+        <a href='controller_Databarang.php'>Data Barang</a>
+        <a href='controller_Stok.php'>Stok</a>
+        <a href='controller_Costumer.php'>Costumer</a>
+        <a href='controller_Distri.php'>Distributor</a>
+        <a href='controller_Transaksi.php'>Transaksi</a>
+        <a href='../../public/logout.php'>Logout</a>
+        </td>
         </tr>";
         echo "<tr>
         <th>ID</th>
