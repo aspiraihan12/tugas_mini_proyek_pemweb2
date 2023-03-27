@@ -3,35 +3,35 @@
 
 class View {
     public function index($data) {
-        echo "<table border='1'>";
-        echo "<tr>
-        <td colspan='10' >
-        <a href='?page=tambah'>Tambah</a>
-        <a href='controller_Databarang.php'>Data Barang</a>
-        <a href='controller_Stok.php'>Stok</a>
-        <a href='controller_Costumer.php'>Costumer</a>
-        <a href='controller_Distri.php'>Distributor</a>
-        <a href='controller_Transaksi.php'>Transaksi</a>
-        <a href='../../public/logout.php'>Logout</a>
-        </td>
-        </tr>";
-        echo "<tr>
+        echo "<nav><ul>
+        <li class='content'><a href='?page=tambah'>Tambah</a></li>
+        <li class='content'><a href='controller_Databarang.php'>Data Barang</a></li>
+        <li class='content'><a href='controller_Stok.php'>Stok</a></li>
+        <li class='content'><a href='controller_Costumer.php'>Costumer</a></li>
+        <li class='content'><a href='controller_Distri.php'>Distributor</a></li>
+        <li class='content'><a href='controller_Transaksi.php'>Transaksi</a></li>
+        <li class='content'><a href='../../public/logout.php'>Logout</a></li>
+        </ul></nav>";
+
+        echo "<table border='1'>
+        <tr>
         <th>ID</th>
         <th>Costumer_id</th>
         <th>data_barang_id</th>
         <th>admin_id</th>
         <th>jumlah transaksi</th>
         <th>tanggal transaksi</th>
-        <th>Action</th></tr>";
+        <th colspan='2'>Action</th>";
         foreach ($data as $row) {
             echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
-            echo "<td>" . $row['costumer_id'] . "</td>";
-            echo "<td>" . $row['data_barang_id'] . "</td>";
-            echo "<td>" . $row['admin_id'] . "</td>";
-            echo "<td>" . $row['jumlah_transaksi'] . "</td>";
+            echo "<td class='id'>" . $row['id'] . "</td>";
+            echo "<td class='id'>" . $row['costumer_id'] . "</td>";
+            echo "<td class='id'>" . $row['data_barang_id'] . "</td>";
+            echo "<td class='id'>" . $row['admin_id'] . "</td>";
+            echo "<td class='id'>" . $row['jumlah_transaksi'] . "</td>";
             echo "<td>" . $row['tanggal_transaksi'] . "</td>";
-            echo "<td><a href='controller_Transaksi.php?page=edit&id=" . $row['id'] . "'>Edit</a> | <a href='controller_Transaksi.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
+            echo "<td class='edit'><a class='edit' href='controller_Transaksi.php?page=edit&id=" . $row['id'] . "'>Edit</a></td>";
+            echo "<td class='delete'><a class='delete' href='controller_Transaksi.php?page=delete&id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -134,13 +134,7 @@ class View {
   
         </tr>";
      
-        
-
         echo "</form></table>";
-
-    
-
-       
     }
 
     public function edit($data){
@@ -226,7 +220,6 @@ class View {
         <td><input type='number' name='jumlah_transaksi' /></td>
         </tr>";
 
-
         echo "
         <tr>
         <td>tanggal transaksi</td>
@@ -240,15 +233,8 @@ class View {
   
         </tr>";
      
-        
-
         echo "</form></table>";
-     
-        
-
-
         }
-    
 }
 }
 ?>
