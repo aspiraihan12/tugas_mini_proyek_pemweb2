@@ -342,16 +342,9 @@
     <div class="box-container">
         <div class="box">
             <h3>contact info</h3>
-<<<<<<< HEAD
-            <a style="text-decoration:none" href="#" class="fa-solid fa-square-phone">  0822-5553-6627</a>
-            <a style="text-decoration:none" href="#" class="fa-solid fa-envelope"> azh@gmail.com</a>
-            <a style="text-decoration:none" href="#" class="fa-sharp fa-solid fa-location-dot"> Jl. Brigjen Jalan Hasan Basri, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70123</a>
-            <img src="IMG/payment.png" alt="">
-=======
             <a style="text-decoration:none" class="fa-solid fa-square-phone">  0852-4433-2211</a>
             <a style="text-decoration:none" class="fa-solid fa-envelope"> tokosepatu_XII@gmail.com</a>
             <a style="text-decoration:none" class="fa-sharp fa-solid fa-location-dot"> Jl. Trans Kalimantan Komplek Persada Raya 6 Jalur 2B No.5, Handil Bakti, Kalimantan Selatan, Indonesia.</a>
->>>>>>> 5042e3e500cf20f09bbe00232309a7ffac2347b5
         </div>
 
     </div>
