@@ -47,7 +47,6 @@ class Model {
         return $result;
     }
 
-
     public function edit($id) {
         $conn = $this->connect();
         $result = $conn->query("SELECT * FROM transaksi where id=$id");
@@ -57,6 +56,4 @@ class Model {
         }
         return $data;
     }
-
-
 }
