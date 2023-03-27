@@ -51,7 +51,6 @@ class Model
         return $result;
     }
 
-
     public function edit($id)
     {
         $conn = $this->connect();
